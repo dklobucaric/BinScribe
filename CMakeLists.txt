@@ -68,3 +68,12 @@ install(TARGETS BinScribe
 if(QT_VERSION_MAJOR EQUAL 6)
     qt_finalize_executable(BinScribe)
 endif()
+if (WIN32)
+    set(APP_ICON_RESOURCE_WINDOWS "${CMAKE_CURRENT_SOURCE_DIR}/app.rc")
+    target_sources(BinScribe PRIVATE ${APP_ICON_RESOURCE_WINDOWS})
+endif()
+
+if (EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/resources.qrc")
+    qt_add_resources(APP_RESOURCES resources.qrc)
+    target_sources(BinScribe PRIVATE ${APP_RESOURCES})
+endif()
