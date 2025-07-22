@@ -1,3 +1,10 @@
+/*
+ TODO:
+ - Dodati podršku za spremanje datoteka
+ - Omogućiti učitavanje binarnih .txt fajlova
+*/
+
+
 #include "mainwindow.h"
 
 #include <QApplication>
