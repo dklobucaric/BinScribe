@@ -1,3 +1,4 @@
+// verzioja 1.1
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
@@ -14,15 +15,17 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    MainWindow(QWidget *parent = nullptr);
+    explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
-private:
-    Ui::MainWindow *ui;
-
 private slots:
-    void saveAsBinary();
+    void newFile();
+    void openFile();
+    void saveFile();
 
+private:
+    bool saveAsBinary();
+    Ui::MainWindow *ui;
 };
-#endif // MAINWINDOW_H
 
+#endif // MAINWINDOW_H
