@@ -1,4 +1,4 @@
-// verzija 1.1.0
+// verzija 1.1.1
 /*
  * BinScribe — jednostavna aplikacija za zapisivanje teksta u binarnom obliku
  * Copyright (C) 2025  Dalibor Klobučarić
@@ -11,6 +11,7 @@
  *
  * Više informacija: https://www.gnu.org/licenses/gpl-3.0.html
  */
+
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
@@ -21,7 +22,6 @@
 #include <QMessageBox>
 #include <QRegularExpression>
 
-
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -29,7 +29,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
 
     // Postavljanje naslova prozora i ikone aplikacije
-    setWindowTitle("BinScribe v1.1");
+    setWindowTitle("BinScribe v1.1.1");
     setWindowIcon(QIcon(":/BinScribe.ico"));
 
     // Povezivanje akcija s custom slotovima
@@ -50,10 +50,12 @@ bool MainWindow::saveAsBinary()
 
     for (int i = 0; i < text.size(); ++i) {
         QChar ch = text.at(i);
-        binaryOutput += QString("%1").arg(static_cast<ushort>(ch.unicode()), 8, 2, QLatin1Char('0'));
+        // 16-bitno binarno kodiranje (Unicode)
+        binaryOutput += QString::number(static_cast<ushort>(ch.unicode()), 2).rightJustified(16, '0');
+
     }
 
-    QString fileName = QFileDialog::getSaveFileName(this, "Save Binary File", "", "Text Files (*.txt)");
+    QString fileName = QFileDialog::getSaveFileName(this, "Spremi kao binarni tekst", "", "Text Files (*.txt)");
     if (!fileName.isEmpty()) {
         QFile file(fileName);
         if (file.open(QIODevice::WriteOnly | QIODevice::Text)) {
@@ -61,14 +63,14 @@ bool MainWindow::saveAsBinary()
             out << binaryOutput;
             file.close();
 
-            QMessageBox::information(this, "Datoteka spremljena",
-                                     QString("Datoteka '%1' je uspješno spremljena.").arg(fileName));
+            QMessageBox::information(this, "Spremljeno", QString("Datoteka '%1' je spremljena.").arg(fileName));
             return true;
         }
     }
 
     return false;
 }
+
 
 void MainWindow::newFile()
 {
@@ -99,7 +101,7 @@ void MainWindow::openFile()
             QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel);
 
         if (reply == QMessageBox::Yes) {
-            saveAsBinary();
+            if (!saveAsBinary()) return;
         } else if (reply == QMessageBox::Cancel) {
             return;
         }
@@ -113,26 +115,27 @@ void MainWindow::openFile()
             QString content = in.readAll();
             file.close();
 
-            // Provjeri je li sadržaj binaran (samo 0 i 1, duljina višekratnik 8)
-            static const QRegularExpression re("^[01]+$");
-            if (re.match(content).hasMatch() && content.length() % 8 == 0) {
+            // Provjeri je li binarni sadržaj (samo 0 i 1) i duljina višekratnik 16
+            static const QRegularExpression binRe("^[01]+$");
+            if (binRe.match(content).hasMatch() && content.length() % 16 == 0) {
                 QString decoded;
-                for (int i = 0; i < content.length(); i += 8) {
-                    QString byteString = content.mid(i, 8);
+                for (int i = 0; i < content.length(); i += 16) {
+                    QString binary16 = content.mid(i, 16);
                     bool ok;
-                    ushort unicodeValue = byteString.toUShort(&ok, 2);
+                    ushort unicode = binary16.toUShort(&ok, 2);
                     if (ok) {
-                        decoded.append(QChar(unicodeValue));
+                        decoded.append(QChar(unicode));
                     } else {
-                        QMessageBox::warning(this, "Greška", "Ne mogu dekodirati binarni sadržaj.");
+                        QMessageBox::warning(this, "Greška", "Dekodiranje nije uspjelo (neispravna binarna riječ).");
                         return;
                     }
                 }
                 ui->textEdit->setPlainText(decoded);
-            } else {
-                // Normalni UTF tekst
-                ui->textEdit->setPlainText(content);
+                return;
             }
+
+            // Inače normalni tekst
+            ui->textEdit->setPlainText(content);
         }
     }
 }
