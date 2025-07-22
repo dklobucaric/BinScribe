@@ -1,4 +1,4 @@
-// verzija 1.1.
+// verzija 1.1.0
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
