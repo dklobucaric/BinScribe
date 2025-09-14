@@ -43,7 +43,7 @@ ili bez FUSE-a:<br />
 
 ### Opcija B — Debian/Ubuntu (.deb paket)
 1. Instaliraj .deb<br />
-`sudo apt install -y libqt6core6 libqt6gui6 libqt6widgets6 qt6-base-platforms qt6-wayland libxkbcommon-x11-0 libxcb-cursor0 libxcb-xinerama0`<br />
+`sudo apt install -y libqt6core6 libqt6gui6 libqt6widgets6 qt6-wayland libxkbcommon-x11-0 libxcb-cursor0 libxcb-xinerama0`<br />
 `sudo dpkg -i binscribe-*.deb`<br />
 ako prijavi nedostajuće ovisnosti<br />
 `sudo apt -f install`
