@@ -1,6 +1,6 @@
 # BinScribe
 
-**BinScribe** je lagana, cross-platformska aplikacija otvorenog koda za konverziju tekstualnih datoteka u binarni zapis (0 i 1) i obrnuto.
+**BinScribe** je lagani, cross-platformski tekst editor otvorenog koda za konverziju tekstualnih datoteka u binarni zapis (0 i 1) i obrnuto.
 
 Aplikacija omogućuje:
 - Kreiranje novih dokumenata
