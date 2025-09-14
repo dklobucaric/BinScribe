@@ -27,6 +27,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         BinScribe.jpg
         LICENSE.md
         binscribe-1.1.2-Linux.deb
+        BinScribe-Setup-1.1.2.exe
+        BinScribe-x86_64.AppImage
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET BinScribe APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
