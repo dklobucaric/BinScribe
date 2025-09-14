@@ -11,6 +11,7 @@
  *
  * Više informacija: https://www.gnu.org/licenses/gpl-3.0.html
  */
+
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
