@@ -150,5 +150,5 @@ void MainWindow::saveFile()
 void MainWindow::on_actionAbout_triggered()
 {
     QMessageBox::about(this, "About BinScribe",
-                       "BinScribe v1.1.2\n\nSimple application to convert text to binary and back.\n\n© 2025 Dalibor Klobučarić\nReleased under GNU GPL v3.");
+                       "BinScribe v1.1.2\n\nJednostavan tekst editor koji konvertira tekst u binarni zapis i natrag.\n\n© 2025 Dalibor Klobučarić\nReleased under GNU GPL v3.");
 }

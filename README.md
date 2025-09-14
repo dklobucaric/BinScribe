@@ -10,9 +10,10 @@ Aplikacija omogućuje:
 
 ## Verzija
 
-Trenutna verzija: **1.1**  
+Trenutna verzija: **1.1.2**  
 - Dodana binarna dekripcija  
 - Pametno otvaranje `.txt` datoteka (prepoznaje binarni zapis i pretvara u čitljiv tekst)
+- Dodani segment o programu
 
 ## Platforma
 
