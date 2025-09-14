@@ -67,6 +67,12 @@ Repozitorij: [github.com/dklobucaric/BinScribe](https://github.com/dklobucaric/B
 734ef0bd46b56b871aafcf67d2d71df3ac5cbe9614d794a93eefe6b7551058ba  BinScribe-x86_64.AppImage<br />
 5f9ccc34b846b0325fe7b515d3969751bb6814bed6fa54c73997e9c9026a6b87  BinScribe-Setup-1.1.2.exe
 
+## Tested
+Debain 13<br />
+Ubuntu 24<br />
+Windows 10<br />
+Windows 11<br />
+
 ## Licenca
 
 
