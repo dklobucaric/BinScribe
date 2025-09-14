@@ -1,4 +1,4 @@
-// verzija 1.1.0
+// verzija 1.1.2
 /*
  * BinScribe — jednostavna aplikacija za zapisivanje teksta u binarnom obliku
  * Copyright (C) 2025  Dalibor Klobučarić

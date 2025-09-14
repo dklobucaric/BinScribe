@@ -1,4 +1,4 @@
-// verzija 1.1.0
+// verzija 1.1.2
 /*
  * BinScribe — jednostavna aplikacija za zapisivanje teksta u binarnom obliku
  * Copyright (C) 2025  Dalibor Klobučarić
@@ -144,4 +144,11 @@ void MainWindow::openFile()
 void MainWindow::saveFile()
 {
     saveAsBinary();
+}
+#include <QMessageBox>
+
+void MainWindow::on_actionAbout_triggered()
+{
+    QMessageBox::about(this, "About BinScribe",
+                       "BinScribe v1.1.2\n\nSimple application to convert text to binary and back.\n\n© 2025 Dalibor Klobučarić\nReleased under GNU GPL v3.");
 }
