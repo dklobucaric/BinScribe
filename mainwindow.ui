@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>808</width>
+    <width>812</width>
     <height>630</height>
    </rect>
   </property>
@@ -31,13 +31,13 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>808</width>
+     <width>812</width>
      <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuHelp">
     <property name="title">
-     <string>Help</string>
+     <string>Pomoć</string>
     </property>
     <addaction name="actionAbout"/>
    </widget>
@@ -48,7 +48,10 @@
   </widget>
   <action name="actionNew">
    <property name="text">
-    <string>&amp;New</string>
+    <string>&amp;Novo</string>
+   </property>
+   <property name="iconText">
+    <string>Novo</string>
    </property>
    <property name="toolTip">
     <string>Novo</string>
@@ -56,7 +59,7 @@
   </action>
   <action name="actionOpen">
    <property name="text">
-    <string>&amp;Open</string>
+    <string>&amp;Otvori</string>
    </property>
    <property name="toolTip">
     <string>Otvori</string>
@@ -64,7 +67,10 @@
   </action>
   <action name="actionSave">
    <property name="text">
-    <string>&amp;Save</string>
+    <string>&amp;Spremi</string>
+   </property>
+   <property name="iconText">
+    <string>Spremi</string>
    </property>
    <property name="toolTip">
     <string>Spremi</string>
@@ -72,7 +78,7 @@
   </action>
   <action name="actionAbout">
    <property name="text">
-    <string>&amp;About</string>
+    <string>&amp;O programu</string>
    </property>
    <property name="toolTip">
     <string>O Programu</string>
