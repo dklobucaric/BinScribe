@@ -17,8 +17,8 @@ Trenutna verzija: **1.1.2**
 
 ## Platforma
 
-- Windows (.exe build)
-- Linux build preko CMake (uskoro .deb paket)
+- Windows build kao setup .exe 
+- Linux build .deb i AppImage paket
 
 ## Screenshot
 
