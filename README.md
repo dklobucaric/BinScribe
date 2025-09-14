@@ -22,7 +22,7 @@ Trenutna verzija: **1.1.2**
 
 ## Screenshot
 
-*(Ovdje možeš staviti sliku aplikacije ako želiš)*
+![BinScribe Screenshot](Resources/BinScribe.jpg)
 
 ## Preuzimanje
 
