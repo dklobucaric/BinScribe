@@ -62,6 +62,11 @@ ako prijavi nedostajuće ovisnosti<br />
 
 Repozitorij: [github.com/dklobucaric/BinScribe](https://github.com/dklobucaric/BinScribe)
 
+## SHA256 - za prebuild
+1b83ba7a538195e382c2e932f51d4e05f0b0075039ec34a4a5d674aded321c46  binscribe-1.1.2-Linux.deb<br />
+734ef0bd46b56b871aafcf67d2d71df3ac5cbe9614d794a93eefe6b7551058ba  BinScribe-x86_64.AppImage<br />
+5f9ccc34b846b0325fe7b515d3969751bb6814bed6fa54c73997e9c9026a6b87  BinScribe-Setup-1.1.2.exe
+
 ## Licenca
 
 
