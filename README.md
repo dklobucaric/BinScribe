@@ -30,7 +30,17 @@ Repozitorij: [github.com/dklobucaric/BinScribe](https://github.com/dklobucaric/B
 
 ## Licenca
 
-Projekt je otvorenog koda pod MIT licencom. Slobodno koristi, mijenjaj i dijeli dalje.
+
+**BinScribe (izvorni kod)** je objavljen pod **MIT licencom** – vidi datoteku `LICENSE`.
+
+BinScribe binarne distribucije uključuju **Qt** biblioteke koje su licencirane pod **LGPLv3**.
+Korisnik smije zamijeniti isporučene Qt DLL-ove vlastitim buildovima Qt-a.
+Tekstovi licenci nalaze se u direktoriju `licenses/` (LGPL-3.0) i/ili na stranicama Qt projekta.
+
+- Vaš kod: MIT
+- Uključene biblioteke: Qt (LGPLv3)
+
+© 2025 Dalibor Klobučarić
 
 ## Donacije
 
