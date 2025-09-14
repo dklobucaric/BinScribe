@@ -29,7 +29,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
 
     // Postavljanje naslova prozora i ikone aplikacije
-    setWindowTitle("BinScribe v1.1.1");
+    setWindowTitle("BinScribe - vr. 1.1.2");
     setWindowIcon(QIcon(":/BinScribe.ico"));
 
     // Povezivanje akcija s custom slotovima
